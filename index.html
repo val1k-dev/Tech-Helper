@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор команд</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор форм для наказаний</h1>
+        <div class="form-container">
+            <div class="input-group">
+                <textarea id="inputText" placeholder="Nick_Name reason
+Nick_Name reason" class="main-input" rows="5"></textarea>
+            </div>
+            <div class="options-group">
+                <label class="radio-container">
+                    <input type="radio" name="commandType" value="banoff" checked>
+                    <span class="radio-label">Ban</span>
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="commandType" value="jailoff">
+                    <span class="radio-label">Jail</span>
+                </label>
+            </div>
+            <div class="options-group moderator-group">
+                <label class="radio-container">
+                    <input type="radio" name="moderator" value="V.Kiselev" checked>
+                    <span class="radio-label">V.Kiselev</span>
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="moderator" value="D.Cottone">
+                    <span class="radio-label">D.Cottone</span>
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="moderator" value="S.Norpata">
+                    <span class="radio-label">S.Norpata</span>
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="moderator" value="M.Yablochko">
+                    <span class="radio-label">M.Yablochko</span>
+                </label>
+            </div>
+            <button id="generateBtn" class="generate-btn">Сгенерировать</button>
+            <div class="result-container">
+                <textarea id="resultText" readonly class="result-input" rows="10"></textarea>
+                <button id="copyBtn" class="copy-btn">Копировать</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
