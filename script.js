@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const inputText = document.getElementById('inputText');
     const generateBtn = document.getElementById('generateBtn');
     const resultText = document.getElementById('resultText');
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateBtn.addEventListener('click', generateCommand);
     copyBtn.addEventListener('click', copyToClipboard);
 
+
     function generateCommand() {
         const input = inputText.value.trim();
         if (!input) {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Split input into lines and filter out empty lines
         const lines = input.split(/\n/).filter(line => line.trim());
-        
+
         // Get selected command type
         let commandType = '';
         for (const radio of radioButtons) {
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (const radio of moderatorRadios) {
             if (radio.checked) {
                 moderator = radio.value;
+
                 break;
             }
         }
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let commands = lines.map(line => {
             const [nickname, ...reasonParts] = line.trim().split(/\s+/);
             const reason = reasonParts.join(' ');
-            
+
             if (!nickname || !reason) return '';
 
             if (commandType === 'banoff') {

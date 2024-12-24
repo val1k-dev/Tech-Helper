@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор команд</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор Онлайна</h1>
+        <div class="form-container">
+            <div class="input-group">
+                <textarea id="inputText" placeholder="Строки из логов" class="main-input" rows="5"></textarea>
+            </div>
+            <button id="generateBtn" class="generate-btn">Посчитать</button>
+            <div class="result-container">
+                <textarea id="resultText" readonly class="result-input" rows="10"></textarea>
+                <button id="copyBtn" class="copy-btn">Копировать</button>
+            </div>
+            <button onclick="location.href='index.html'" class="generate-btn">На главную</button>
+        </div> 
+        
+    </div>
+    <script src="online.js"></script>
+</body>
+</html>
