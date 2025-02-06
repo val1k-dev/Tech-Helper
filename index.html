@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Генератор форм для наказаний (За ником пишите vk.com/val1kdobriy)</h1>
+        <h1>Генератор форм для наказаний</h1>
+        <h3>Если вашего тега нет в списке, выбирайте "другое" (сначала нужно ввести формы, затем тег, и нажать "Сгенерировать")</h3>
         <div class="form-container">
             <div class="input-group">
                 <textarea id="inputText" placeholder="Nick_Name reason
@@ -44,15 +47,19 @@ Nick_Name reason" class="main-input" rows="5"></textarea>
                     <input type="radio" name="moderator" value="M.Yablochko">
                     <span class="radio-label">M.Yablochko</span>
                 </label>
-                 
                 <label class="radio-container">
                     <input type="radio" name="moderator" value="D.Kiselev">
                     <span class="radio-label">D.Kiselev</span>
                 </label>
-                
-                 <label class="radio-container">
+                <label class="radio-container">
                     <input type="radio" name="moderator" value="A.Dolmatov">
                     <span class="radio-label">A.Dolmatov</span>
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="moderator" id="otherModerator" value="other">
+                    <span class="radio-label" id="otherModeratorLabel">Другое</span>
+                    <input type="text" name="moderator_other" id="moderatorOtherInput" placeholder="Тег // V.Kiselev"
+                        style="display: none;">
                 </label>
             </div>
             <button id="generateBtn" class="generate-btn">Сгенерировать</button>
@@ -62,8 +69,9 @@ Nick_Name reason" class="main-input" rows="5"></textarea>
             </div>
             <button onclick="location.href='online.html'" class="generate-btn">Калькулятор Онлайна</button>
         </div>
-        
+
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
