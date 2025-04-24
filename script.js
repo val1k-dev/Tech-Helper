@@ -72,12 +72,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const [nickname, ...reasonParts] = line.trim().split(/\s+/);
             const reason = reasonParts.join(' ');
 
-            if (!nickname || !reason) return '';
+            if (!nickname) return;
+            if ((commandType === 'banoff' || commandType === 'jailoff') && !reason) return;
 
             if (commandType === 'banoff') {
                 return `/banoff ${nickname} 998 ${reason} // ${moderator}`;
             } else if (commandType === 'jailoff') {
                 return `/jailoff ${nickname} 5000 ${reason} // ${moderator}`;
+            } else if (commandType === 'padm') {
+                return `/padm ${nickname}`;
+            } else if (commandType === 'admreg') {
+                return `/admreg ${nickname}`;
             }
             return '';
         }).filter(cmd => cmd);

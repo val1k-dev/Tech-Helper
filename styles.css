@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #e0f7fa 0%, #d1c4e9 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -16,35 +16,32 @@ body {
 
 .container {
     width: 100%;
-    max-width: 600px;
-    padding: 20px;
+    max-width: 640px;
+    padding: 25px;
 }
 
 h1 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 30px;
-    font-weight: 600;
-    font-size: 28px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-
 
 h3 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 600;
     font-size: 18px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
-
 
 .form-container {
     background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .input-group {
@@ -53,130 +50,106 @@ h3 {
 
 .main-input {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #e1e1e1;
-    border-radius: 10px;
-    font-size: 15px;
-    transition: all 0.3s ease;
+    padding: 18px;
+    border: 2px solid #dcdde1;
+    border-radius: 12px;
+    font-size: 16px;
     resize: vertical;
-    min-height: 120px;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
+    min-height: 140px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .main-input:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    border-color: #7f8c8d;
+    box-shadow: 0 0 0 4px rgba(127, 140, 141, 0.2);
 }
 
 .options-group {
     margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 .moderator-group {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    margin-bottom: 25px;
+    background: #f0f3f5;
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .radio-container {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    padding: 8px 16px;
+    gap: 10px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    padding: 10px 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
 .radio-container:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.radio-container input[type="radio"] {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.radio-container input[type="text"] {
-    margin-right: 8px;
-    cursor: pointer;
-    border: none;
-    stroke: none;
-    /* outline: none; */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .radio-label {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
     color: #2c3e50;
+    font-weight: 500;
 }
 
 .generate-btn {
     width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #5c6bc0, #42a5f5);
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
+    border-radius: 12px;
     transition: all 0.3s ease;
-    margin-bottom: 25px;
 }
 
 .generate-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-}
-
-.generate-btn:active {
-    transform: translateY(0);
+    box-shadow: 0 8px 16px rgba(66, 165, 245, 0.3);
 }
 
 .result-container {
     position: relative;
+    margin-top: 20px;
 }
 
 .result-input {
     width: 100%;
-    padding: 15px;
+    padding: 18px;
     border: 2px solid #e1e1e1;
-    border-radius: 10px;
+    border-radius: 12px;
+    background-color: #f4f6f7;
     font-size: 15px;
-    margin-bottom: 15px;
-    background-color: #f8f9fa;
-    min-height: 150px;
     resize: vertical;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
+    min-height: 150px;
 }
 
 .copy-btn {
     position: absolute;
-    right: 10px;
     top: 10px;
-    padding: 8px 16px;
-    background: #ffffff;
-    color: #3498db;
-    border: 1px solid #3498db;
+    right: 10px;
+    background: white;
+    border: 1px solid #5c6bc0;
+    color: #5c6bc0;
     border-radius: 6px;
+    padding: 8px 14px;
     font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .copy-btn:hover {
-    background: #3498db;
+    background-color: #5c6bc0;
     color: white;
 }
 
@@ -184,32 +157,12 @@ h3 {
     .container {
         padding: 10px;
     }
-    
+
     .form-container {
         padding: 20px;
     }
-    
+
     h1 {
         font-size: 24px;
     }
-}
-
-
-.calculator {
-    margin: 20px 0;
-}
-
-#calcInput {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#calcButton {
-    padding: 10px 20px;
-}
-
-.back-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
 }
