@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор команд</title>
+    <title>Формы наказаний</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 
 <body>
     <div class="container">
-        <h1>Генератор форм для наказаний</h1>
-        <h3>Если вашего тега нет в списке, выбирайте "другое" (сначала нужно ввести формы, затем тег, и нажать
-            "Сгенерировать")</h3>
+        <div class="logo">Tech - Helper</div>
+        <h2>Формы наказаний</h2>
+        <h3>Не нашли свой тег в списке? Введите формы, выберите «Другое», укажите нужный тег и нажмите «Сгенерировать».</h3>
         <div class="form-container">
             <div class="input-group">
                 <textarea id="inputText" placeholder="Nick_Name reason
@@ -31,12 +31,16 @@ Nick_Name reason" class="main-input" rows="5"></textarea>
                     <span class="radio-label">Jail</span>
                 </label>
                 <label class="radio-container">
+                    <input type="radio" name="commandType" value="warn">
+                    <span class="radio-label">Warn</span>
+                </label>
+                <label class="radio-container">
                     <input type="radio" name="commandType" value="padm">
-                    <span class="radio-label">/padm</span>
+                    <span class="radio-label">Padm</span>
                 </label>
                 <label class="radio-container">
                     <input type="radio" name="commandType" value="admreg">
-                    <span class="radio-label">/admreg</span>
+                    <span class="radio-label">Admreg</span>
                 </label>
             </div>
             <div class="options-group moderator-group">
@@ -47,14 +51,6 @@ Nick_Name reason" class="main-input" rows="5"></textarea>
                 <label class="radio-container">
                     <input type="radio" name="moderator" value="P.Mishkins">
                     <span class="radio-label">P.Mishkins</span>
-                </label>
-                <label class="radio-container">
-                    <input type="radio" name="moderator" value="S.Norpata">
-                    <span class="radio-label">S.Norpata</span>
-                </label>
-                <label class="radio-container">
-                    <input type="radio" name="moderator" value="M.Yablochko">
-                    <span class="radio-label">M.Yablochko</span>
                 </label>
                 <label class="radio-container">
                     <input type="radio" name="moderator" value="D.Kiselev">
@@ -78,7 +74,13 @@ Nick_Name reason" class="main-input" rows="5"></textarea>
             </div>
             <button onclick="location.href='online.html'" class="generate-btn">Калькулятор Онлайна</button>
         </div>
-
+        <div class="contact-info">
+            <p>Есть вопросы или предложения? Пишите автору:</p>
+            <ul>
+                <li><a href="https://vk.com/val1kdobriy" target="_blank">ВКонтакте</a></li>
+                <li><a href="https://discord.com/users/663465019874344961" target="_blank">Discord</a></li>
+            </ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

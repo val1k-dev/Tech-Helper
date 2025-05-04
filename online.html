@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор команд</title>
+    <title>Калькулятор Онлайна</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Калькулятор Онлайна</h1>
+        <div class="logo">Tech - Helper</div>
+        <h2>Калькулятор Онлайна</h2>
         <div class="form-container">
             <div class="input-group">
                 <textarea id="inputText" placeholder="Строки из логов" class="main-input" rows="5"></textarea>
@@ -21,9 +22,15 @@
                 <textarea id="resultText" readonly class="result-input" rows="10"></textarea>
                 <button id="copyBtn" class="copy-btn">Копировать</button>
             </div>
-            <button onclick="location.href='index.html'" class="generate-btn">На главную</button>
-        </div> 
-        
+            <button onclick="location.href='index.html'" class="generate-btn">Формы наказаний</button>
+        </div>
+        <div class="contact-info">
+            <p>Есть вопросы или предложения? Пишите автору:</p>
+            <ul>
+                <li><a href="https://vk.com/val1kdobriy" target="_blank">ВКонтакте</a></li>
+                <li><a href="https://discord.com/users/663465019874344961" target="_blank">Discord</a></li>
+            </ul>
+        </div>
     </div>
     <script src="online.js"></script>
 </body>

@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 return `/padm ${nickname}`;
             } else if (commandType === 'admreg') {
                 return `/admreg ${nickname}`;
+            } else if (commandType === 'warn') {
+                return `/warnoff ${nickname} 1 ${reason} // ${moderator}`;
             }
             return '';
         }).filter(cmd => cmd);
