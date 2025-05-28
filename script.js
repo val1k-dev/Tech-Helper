@@ -64,6 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         return;
                     }
                 }
+
+                if (moderator === 'notag') { // Если выбрано "Другое"
+                   moderator = ''
+                }
+                
                 break;
             }
         }
@@ -76,15 +81,15 @@ document.addEventListener('DOMContentLoaded', function () {
             if ((commandType === 'banoff' || commandType === 'jailoff') && !reason) return;
 
             if (commandType === 'banoff') {
-                return `/banoff ${nickname} 998 ${reason} // ${moderator}`;
+                return `/banoff ${nickname} 998 ${reason} ${moderator}`;
             } else if (commandType === 'jailoff') {
-                return `/jailoff ${nickname} 5000 ${reason} // ${moderator}`;
+                return `/jailoff ${nickname} 5000 ${reason} ${moderator}`;
             } else if (commandType === 'padm') {
                 return `/padm ${nickname}`;
             } else if (commandType === 'admreg') {
                 return `/admreg ${nickname}`;
             } else if (commandType === 'warn') {
-                return `/warnoff ${nickname} 1 ${reason} // ${moderator}`;
+                return `/warnoff ${nickname} 1 ${reason} ${moderator}`;
             }
             return '';
         }).filter(cmd => cmd);
