@@ -5,4 +5,4 @@
 Код защищён лицензией https://www.apache.org/licenses/LICENSE-2.0 
 Копирование запрещено
 
-https://alexskydev.github.io/Tech-Helper/
+https://val1k-dev.github.io/Tech-Helper/
